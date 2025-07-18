@@ -4,7 +4,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div className='bg-[#131921] text-white md:px-6 py-2 '>
-      <ul className="flex gap-5 items-center overflow-x-auto md:overflow-x-hidden whitespace-nowrap px-2 [&>li]:cursor-pointer">
+      <ul className="flex gap-5 items-center overflow-x-auto hide-scrollbar md:overflow-x-hidden whitespace-nowrap px-2 [&>li]:cursor-pointer">
         <li className="md:flex gap-2 items-center hidden"><Icons.burger />All</li>
         <li>Amazon Haul</li>
         <li>Medical Care</li>

@@ -13,3 +13,20 @@
 body {
   
 }
+
+
+
+/* For Webkit browsers (Chrome, Safari, Opera) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* or width: 0; height: 0; */
+}
+
+/* For Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* For IE and Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+}
