@@ -2,12 +2,7 @@
 import React from 'react'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { FiShoppingCart } from "react-icons/fi";
-import { FaSearch } from "react-icons/fa";
-import { IoLocationOutline } from "react-icons/io5";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { FaRegUser } from "react-icons/fa6";
-import { IoIosArrowForward } from "react-icons/io";
+import { Icons } from '@/app/data/Imports';
 
 
 const header = () => {
@@ -28,7 +23,7 @@ const header = () => {
         </Link>
 
         <div className="flex items-center gap-2 text-xs border py-2 px-4 border-black hover:border-white cursor-pointer">
-          <div className=""><IoLocationOutline className="h-4 w-4 text-white" /></div>
+          <div className=""><Icons.location className="h-4 w-4 text-white" /></div>
           <div className="flex flex-col md:text-[10px]">
             <span className="text-gray-300">Deliver to</span>
             <span className="font-bold">Pakistan</span>
@@ -53,7 +48,7 @@ const header = () => {
             className="flex-grow px-4 py-2 outline-none text-black bg-white"
           />
           <button className="bg-yellow-400 px-4 py-2 rounded-r-md hover:bg-yellow-500">
-            <FaSearch className='text-black' />
+            <Icons.search className='text-black' />
           </button>
         </div>
 
@@ -72,18 +67,18 @@ const header = () => {
         </div>
 
         {/* Cart */}
-        <Link href="/cart" className="relative md:flex items-center ">
-          <FiShoppingCart className="h-8 w-8 text-white" />
-          <span className="absolute top-0 right-0 text-xs bg-yellow-400 text-black px-1 rounded-full">
+        <Link href="/cart" className="relative md:flex items-center gap-2">
+          <Icons.cart className="h-8 w-8 text-white" />
+          <span className="absolute top-0 right-8 text-xs bg-yellow-400 text-black px-1 rounded-full">
             {cartCount}
-          </span>
+          </span> <span className='text-[14px]'>Cart</span>
         </Link>
       </div>
       {/* /////////////////////////////////////////////////////////////////////// */}
       {/* for mobile view */}
       <div className="flex justify-between md:hidden">
         <div className="flex gap-2 items-center">
-          <span className=''><GiHamburgerMenu size={20} /></span>
+          <span className=''><Icons.burger size={20} /></span>
           <Link href="/" className="text-xl font-bold text-white">
             <span className="border-black hover:border-white p-2 md:text-[14px]">Amazan</span>
           </Link>
@@ -92,11 +87,11 @@ const header = () => {
         <div className="flex gap-2">
           {/* profile */}
           <div className=" flex items-center">
-            <span className='flex items-center'>Sign in <IoIosArrowForward /></span> <FaRegUser size={23}/>
+            <span className='flex items-center'>Sign in <Icons.rightArrow /></span> <Icons.user size={23}/>
           </div>
           {/* Cart */}
           <Link href="/cart" className="relative flex items-center">
-            <FiShoppingCart className="h-8 w-8 text-white" />
+            <Icons.cart className="h-8 w-8 text-white" />
             <span className="absolute top-0 right-0 text-xs bg-yellow-400 text-black px-1 rounded-full">
               {cartCount}
             </span>
@@ -110,7 +105,7 @@ const header = () => {
           className="flex-grow px-4 py-2 outline-none rounded-l-md text-black bg-white w-full"
         />
         <button className="bg-yellow-400 px-4 py-2 rounded-r-md hover:bg-yellow-500">
-          <FaSearch className='text-black' />
+          <Icons.search className='text-black' />
         </button>
       </div>
       {/* /////////////////////////////////////////////////////////////////////// */}
