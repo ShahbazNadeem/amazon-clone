@@ -5,17 +5,17 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
 
-export const Images = {
-    R156: '/images/featureImages/R156.png',
-    R153: '/images/featureImages/R153.png',
-    R154: '/images/featureImages/R154.png',
-    R20: '/images/featureImages/R20.png',
-    R21: '/images/featureImages/R21.png',
-    R22: '/images/featureImages/R22.png',
-    R23: '/images/featureImages/R23.png',
-    R24: '/images/featureImages/R24.png',
-    R25: '/images/featureImages/R25.png',
-}
+export const swipperImages = [
+  { id: 1, src: '/images/swipperImages/img1.jpg' },
+  { id: 2, src: '/images/swipperImages/img2.jpg' },
+  { id: 3, src: '/images/swipperImages/img3.jpg' },
+  { id: 4, src: '/images/swipperImages/img4.jpg' },
+  { id: 5, src: '/images/swipperImages/img5.jpg' },
+  { id: 6, src: '/images/swipperImages/img6.jpg' },
+  { id: 7, src: '/images/swipperImages/img7.jpg' },
+  { id: 8, src: '/images/swipperImages/img8.jpg' },
+];
+
 
 export const Icons = {
     cart: FiShoppingCart,

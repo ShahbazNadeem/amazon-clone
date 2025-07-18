@@ -34,7 +34,7 @@ const header = () => {
         <div className="flex flex-1 ">
           <form className="">
             <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg  focus:border-yellow-400 block w-full p-2.5">
-              <option selected>All</option>
+              <option defaultValue>All</option>
               <option value="US">United States</option>
               <option value="CA">Canada</option>
               <option value="FR">France</option>
@@ -87,7 +87,7 @@ const header = () => {
         <div className="flex gap-2">
           {/* profile */}
           <div className=" flex items-center">
-            <span className='flex items-center'>Sign in <Icons.rightArrow /></span> <Icons.user size={23}/>
+            <span className='flex items-center'>Sign in <Icons.rightArrow /></span> <Icons.user size={23} />
           </div>
           {/* Cart */}
           <Link href="/cart" className="relative flex items-center">
