@@ -2,3 +2,32 @@
 .custom-swiper .swiper-button-prev {
   color: #facc15 !important;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-scrollbar {
+  position: relative !important;
+}
+
+.swiper-nav-btns span:hover {
+  opacity: 1;
+}
+
+.mySwiper:hover .swiper-nav-btns span {
+  opacity: 1;
+}
+
+
+.swipperbox {
+  padding: 20px 0px;
+}
