@@ -1,26 +1,25 @@
 'use client'
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 
 import { Scrollbar } from 'swiper/modules';
-import { Navigation } from 'swiper/modules';
 import { SwiperNavBtn } from './SwipperNavBtn';
-// import { Pagination, Scrollbar } from 'swiper/modules';
 
-const SwipperBox = ({ data }) => {
+const SwipperBox = ({ data, id }) => {
+    const scrollbarClass = `swiper-scrollbar-${id}`;
+
     return (
         <>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={10}
                 scrollbar={{
-                    el: '.swiper-scrollbar',
+                    el: `.${scrollbarClass}`,
                     draggable: true,
                 }}
-                // navigation={true}
                 breakpoints={{
                     375: {
                         slidesPerView: 2,
@@ -44,17 +43,14 @@ const SwipperBox = ({ data }) => {
             >
                 <SwiperNavBtn />
                 {data.map((item) => (
-                    <>
-                        <SwiperSlide key={item.id}>
-                            <figure className='w-fit h-[200px]'>
-                                <img src={item.src} alt={`Slide ${item.id}`} className='w-full h-full' />
-                            </figure>
-                        </SwiperSlide>
-                    </>
+                    <SwiperSlide key={item.id}>
+                        <figure className='w-fit h-[200px]'>
+                            <img src={item.src} alt={`Slide ${item.id}`} className='w-full h-full' />
+                        </figure>
+                    </SwiperSlide>
                 ))}
             </Swiper>
-            <div className="swiper-scrollbar"></div>
-
+            <div className={`swiper-scrollbar ${scrollbarClass}`}></div>
         </>
     )
 }

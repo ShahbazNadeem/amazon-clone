@@ -1,4 +1,4 @@
-import { FiShoppingCart, FiChevronRight, FiChevronLeft   } from "react-icons/fi";
+import { FiShoppingCart, FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -18,14 +18,14 @@ export const swipperImages = [
 
 
 export const Icons = {
-    cart: FiShoppingCart,
-    search: FaSearch,
-    location: IoLocationOutline,
-    burger: GiHamburgerMenu,
-    rightArrow: IoIosArrowForward,
-    user: FaRegUser,
-    rightArrowSmall:FiChevronRight,
-    leftArrowSmall:FiChevronLeft,
+  cart: FiShoppingCart,
+  search: FaSearch,
+  location: IoLocationOutline,
+  burger: GiHamburgerMenu,
+  rightArrow: IoIosArrowForward,
+  user: FaRegUser,
+  rightArrowSmall: FiChevronRight,
+  leftArrowSmall: FiChevronLeft,
 }
 
 export const swipperBoxImages1 = [
@@ -50,3 +50,12 @@ export const swipperBoxImages1 = [
   { id: 19, src: '/images/kitchenSeller/img19.jpg' },
   { id: 20, src: '/images/kitchenSeller/img20.jpg' },
 ];
+
+export const handbags = [
+  { id: 1, src: '/images/handbags/img1.jpg', label: 'lable' },
+  { id: 2, src: '/images/handbags/img2.jpg', label: 'lable' },
+  { id: 3, src: '/images/handbags/img3.jpg', label: 'lable' },
+  { id: 4, src: '/images/handbags/img4.jpg', label: 'lable' },
+];
+
+// 146*116
