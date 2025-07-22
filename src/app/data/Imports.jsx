@@ -1,9 +1,10 @@
 import { FiShoppingCart, FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaFlagUsa } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
+import { CiGlobe } from "react-icons/ci";
 
 export const swipperImages = [
   { id: 1, src: '/images/swipperImages/img1.jpg' },
@@ -26,6 +27,8 @@ export const Icons = {
   user: FaRegUser,
   rightArrowSmall: FiChevronRight,
   leftArrowSmall: FiChevronLeft,
+  globe: CiGlobe,
+  flag: FaFlagUsa,
 }
 
 export const swipperBoxImages1 = [
@@ -57,5 +60,3 @@ export const handbags = [
   { id: 3, src: '/images/handbags/img3.jpg', label: 'lable' },
   { id: 4, src: '/images/handbags/img4.jpg', label: 'lable' },
 ];
-
-// 146*116
