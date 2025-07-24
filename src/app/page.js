@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FourBox from "./_components/FourBox";
 import Layout from "./_components/layout/Layout";
 import Swipper from "./_components/Swippers/Swipper";
@@ -70,7 +71,7 @@ export default function Home() {
         <div className="flex flex-col gap-0.5 items-center">
           <h2 className="text-lg font-semibold">See personalized recommendations</h2>
           <button className="bg-yellow-300 hover:bg-yellow-400 rounded-2xl px-16 py-1">Sign in</button>
-          <span>New customer? <a href="/" className="text-blue-600 underline">Start here</a></span>
+          <span>New customer? <Link href="/" className="text-blue-600 underline">Start here</Link></span>
         </div>
       </section>
 
