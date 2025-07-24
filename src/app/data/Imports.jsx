@@ -242,10 +242,10 @@ export const schoolEssentials = [
 ]
 
 export const fashion = [
-  { id: 1, src: '/images/Fashion/img1.jpg', label: 'Fashion 1' },
-  { id: 2, src: '/images/Fashion/img2.jpg', label: 'Fashion 2' },
-  { id: 3, src: '/images/Fashion/img3.jpg', label: 'Fashion 3' },
-  { id: 4, src: '/images/Fashion/img4.jpg', label: 'Fashion 4' },
+  { id: 1, src: '/images/fashion/img1.jpg', label: 'Fashion 1' },
+  { id: 2, src: '/images/fashion/img2.jpg', label: 'Fashion 2' },
+  { id: 3, src: '/images/fashion/img3.jpg', label: 'Fashion 3' },
+  { id: 4, src: '/images/fashion/img4.jpg', label: 'Fashion 4' },
 ]
 
 export const homeArrivals = [
