@@ -44,9 +44,14 @@ const SwipperBox = ({ data, id }) => {
                 <SwiperNavBtn />
                 {data.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <figure className='w-fit h-[200px]'>
+                       <div className="flex flex-col ">
+                         <figure className='w-fit h-[200px]'>
                             <img src={item.src} alt={`Slide ${item.id}`} className='w-full h-full' />
                         </figure>
+                        <a href="/" className='flex justify-baseline text-blue-700 hover:underline'>{item?.link}</a>
+                        <span className='flex justify-baseline'>{item?.price}</span>
+                        <span className='flex justify-baseline'>{item?.name}</span>
+                       </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
