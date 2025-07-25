@@ -70,7 +70,7 @@ export default function Home() {
       <section className="py-5">
         <div className="flex flex-col gap-0.5 items-center">
           <h2 className="text-lg font-semibold">See personalized recommendations</h2>
-          <button className="bg-yellow-300 hover:bg-yellow-400 rounded-2xl px-16 py-1">Sign in</button>
+          <span><button className="btn1">Sign in</button></span>
           <span>New customer? <Link href="/" className="text-blue-600 underline">Start here</Link></span>
         </div>
       </section>

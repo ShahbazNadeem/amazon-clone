@@ -6,6 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
 import { CiGlobe } from "react-icons/ci";
 import { BiCartAdd } from "react-icons/bi";
+import { RxCross2 } from "react-icons/rx";
 
 export const swipperImages = [
   { id: 1, src: '/images/swipperImages/img1.jpg' },
@@ -30,6 +31,7 @@ export const Icons = {
   leftArrowSmall: FiChevronLeft,
   globe: CiGlobe,
   flag: FaFlagUsa,
+  cross:RxCross2,
 }
 
 export const swipperBoxImages1 = [
