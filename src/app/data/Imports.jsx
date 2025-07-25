@@ -7,6 +7,8 @@ import { FaRegUser } from "react-icons/fa6";
 import { CiGlobe } from "react-icons/ci";
 import { BiCartAdd } from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
+import { Bs1Circle, Bs1CircleFill, Bs2Circle, Bs2CircleFill, Bs3Circle, Bs3CircleFill } from "react-icons/bs";
+
 
 export const swipperImages = [
   { id: 1, src: '/images/swipperImages/img1.jpg' },
@@ -31,7 +33,13 @@ export const Icons = {
   leftArrowSmall: FiChevronLeft,
   globe: CiGlobe,
   flag: FaFlagUsa,
-  cross:RxCross2,
+  cross: RxCross2,
+  one: Bs1Circle,
+  oneFill: Bs1CircleFill,
+  two: Bs2Circle,
+  twoFill: Bs2CircleFill,
+  three: Bs3Circle,
+  threeFill: Bs3CircleFill
 }
 
 export const swipperBoxImages1 = [
@@ -257,19 +265,19 @@ export const homeArrivals = [
   { id: 4, src: '/images/homeArrivals/img4.jpg', label: 'homeArrivals 4' },
 ]
 
-export const toys=[
+export const toys = [
   { id: 1, src: '/images/toys/img1.jpg', label: 'toys 1' },
   { id: 2, src: '/images/toys/img2.jpg', label: 'toys 2' },
   { id: 3, src: '/images/toys/img3.jpg', label: 'toys 3' },
   { id: 4, src: '/images/toys/img4.jpg', label: 'toys 4' },
 ]
-export const getFit=[
+export const getFit = [
   { id: 1, src: '/images/getFit/img1.jpg', label: 'getFit 1' },
   { id: 2, src: '/images/getFit/img2.jpg', label: 'getFit 2' },
   { id: 3, src: '/images/getFit/img3.jpg', label: 'getFit 3' },
   { id: 4, src: '/images/getFit/img4.jpg', label: 'getFit 4' },
 ]
-export const electronics=[
+export const electronics = [
   { id: 1, src: '/images/getFit/img1.jpg', label: 'getFit 1' },
   { id: 2, src: '/images/getFit/img2.jpg', label: 'getFit 2' },
   { id: 3, src: '/images/getFit/img3.jpg', label: 'getFit 3' },

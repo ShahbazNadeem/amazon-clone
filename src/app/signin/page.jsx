@@ -44,7 +44,7 @@ const page = () => {
 
                         <div className="">
                             <h3 className='font-semibold'>Buying for work?</h3>
-                            <p><Link href="/" className="text-blue-600">Create a free business account</Link></p>
+                            <p><Link href="/signup" className="text-blue-600">Create a free business account</Link></p>
                         </div>
                     </form>
                 </div>
