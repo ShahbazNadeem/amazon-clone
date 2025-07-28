@@ -10,7 +10,7 @@ const page = () => {
         <BusinessHeader />
         <div className="flex justify-center gap-5 md:gap-0 flex-col md:flex-row mt-5 md:mt-10 max-w-[900px] mx-auto">
 
-          <div className="border border-gray-300 mx-2 md:mx-0 py-7 px-10 flex flex-col gap-5 basis-full md:basis-[50%]">
+          <div className="border border-gray-300 mx-2 md:mx-0 py-7 px-5 md:px-10 flex flex-col gap-5 basis-full md:basis-[50%]">
             <span className='text-[24px] font-bold'>Lets create your free Amazon Business account</span>
 
             <div className="flex flex-col gap-2">
@@ -23,7 +23,7 @@ const page = () => {
           </div>
 
           <div className="border mx-2 md:mx-0 border-gray-300 bg-[#F5F3EF] basis-[50%]">
-            <div className="flex flex-col gap-2 px-7 py-4">
+            <div className="flex flex-col gap-2 px-3 md:px-7 py-4">
               <span className='text-[28px]'>Added value for every type of organization</span>
 
               <div className="flex flex-col gap-2">
