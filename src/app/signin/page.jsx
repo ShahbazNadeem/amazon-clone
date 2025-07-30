@@ -2,12 +2,42 @@
 import React, { useState } from 'react'
 import { Icons } from '@/app/data/Imports';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const page = () => {
-    const [inputValue, setInputValue] = useState('');
+    const router = useRouter()
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const clearInput = () => {
-        setInputValue('');
+        setEmail('');
     };
+
+    const submitSignin = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('https://67ffac3db72e9cfaf7257b92.mockapi.io/signup');
+            const users = await response.json();
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                const { password, ...userWithoutPassword } = user;
+
+                localStorage.setItem('amazonUser', JSON.stringify(userWithoutPassword));
+                alert('Login successful!');
+                console.log('Stored user:', userWithoutPassword);
+                router.push('/');
+            } else {
+                alert('Invalid email or password!');
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+            alert('Something went wrong. Please try again.');
+        }
+    };
+
+
     return (
         <div className='bg-[#FFFFFF] h-screen py-3'>
             <div className="flex flex-col items-center gap-5">
@@ -17,22 +47,28 @@ const page = () => {
                     </figure>
                 </div>
                 <div className="border border-gray-300 p-5 rounded-xl max-w-[350px]">
-                    <form action="" className='flex flex-col gap-3'>
+                    <div className='flex flex-col gap-3'>
                         <h2>Sign in or create account</h2>
 
                         <div className="flex flex-col gap-2">
-                            <h3 className='font-semibold'>Enter mobile number or email</h3>
-                            <div className="relative">
-                                <input type="text" className='border rounded w-full p-1' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-                                {inputValue && (
-                                    <Icons.cross
-                                        size={20}
-                                        className="absolute top-2 right-1 cursor-pointer"
-                                        onClick={clearInput}
-                                    />
-                                )}
-                            </div>
-                            <button className="btn1">Continue</button>
+                            <form onSubmit={submitSignin} className='flex flex-col gap-2'>
+                                <div className="relative">
+                                    <label htmlFor="email" className='font-semibold'>Enter mobile number or email</label>
+                                    <input id='email' type="email" className='border border-gray-400 rounded w-full p-1' placeholder='Enter email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                                    {email && (
+                                        <Icons.cross
+                                            size={20}
+                                            className="absolute top-2 right-1 cursor-pointer"
+                                            onClick={clearInput}
+                                        />
+                                    )}
+                                </div>
+                                <div className="flex flex-col">
+                                    <label htmlFor="password" className='font-semibold'>Password</label>
+                                    <input id='password' className='border border-gray-400 rounded p-1' type="text" placeholder='enter password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                                </div>
+                                <button className="btn1">Sign in</button>
+                            </form>
 
                         </div>
 
@@ -46,7 +82,7 @@ const page = () => {
                             <h3 className='font-semibold'>Buying for work?</h3>
                             <p><Link href="/signup" className="text-blue-600">Create a free business account</Link></p>
                         </div>
-                    </form>
+                    </div>
                 </div>
 
             </div>

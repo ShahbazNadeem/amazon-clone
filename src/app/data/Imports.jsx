@@ -1,5 +1,5 @@
 import { FiShoppingCart, FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FaSearch, FaFlagUsa } from "react-icons/fa";
+import { FaSearch, FaFlagUsa, FaInfoCircle } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowForward } from "react-icons/io";
@@ -44,6 +44,7 @@ export const Icons = {
   priceTag: ImPriceTags,
   userPlus: LuUserRoundPlus,
   pakage: LuPackagePlus,
+  infoCircle: FaInfoCircle,
 
 }
 

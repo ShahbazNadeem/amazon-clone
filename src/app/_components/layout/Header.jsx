@@ -7,10 +7,15 @@ import { Icons } from '@/app/data/Imports';
 
 const header = () => {
   const [cartCount, setCartCount] = useState(0);
+  const [user, setUser] = useState(0);
 
   useEffect(() => {
-    const cart = JSON.parse(localStorage.getItem('addToCart(FDA)') || '[]');
+    const cart = JSON.parse(localStorage.getItem('amazonCart') || '[]');
     setCartCount(cart.length);
+    const storedUser = localStorage.getItem('amazonUser');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser)); // Convert string to object
+    }
   }, []);
   return (
     <header className="bg-[#131921] text-white px-4 py-2">
@@ -63,7 +68,7 @@ const header = () => {
         {/* Account */}
         <div className="text-xs hover:underline cursor-pointer block">
           <Link href='/signin'>
-            <strong>Hello, Shahbaz</strong>
+            <strong>Hello, {user?.name || 'User'}</strong>
             <br />
             <strong>Account & Lists</strong>
           </Link>
