@@ -1,7 +1,15 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/globalcss":["./src/app/globals.css"],
+      "@/context":["./src/context/"],
+      "@/utils":["./src/utils/"],
+      "@components/*": ["./src/app/_components/*"],
+      "@/images/*": ["./public/images/*"],
+      "@/videos/*": ["./public/videos/*"],
+      "@/data/*": ["./src/app/jsonData/*"],
+      "@/lottie/*": ["./public/lottie/*"],
     }
   }
 }

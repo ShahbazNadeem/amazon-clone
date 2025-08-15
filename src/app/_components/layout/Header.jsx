@@ -14,7 +14,7 @@ const header = () => {
     setCartCount(cart.length);
     const storedUser = localStorage.getItem('amazonUser');
     if (storedUser) {
-      setUser(JSON.parse(storedUser)); // Convert string to object
+      setUser(JSON.parse(storedUser));
     }
   }, []);
   return (
@@ -24,7 +24,6 @@ const header = () => {
 
 
         <Link href="/" className="text-xl font-bold text-white flex justify-center items-center">
-          {/* <span className="border-black hover:border-white p-2 md:text-[14px]">Amazan</span> */}
           <figure className='w-[100px]'>
             <img src="/images/header/amazonLogo.png" alt="amazonLogo" className='w-full h-auto' />
           </figure>
@@ -75,11 +74,11 @@ const header = () => {
         </div>
 
         {/* Orders */}
-        <div className="text-xs hover:underline cursor-pointer block">
+        <Link href='/payments' className="text-xs hover:underline cursor-pointer block">
           <strong>Returns</strong>
           <br />
           <strong>& Orders</strong>
-        </div>
+        </Link>
 
         {/* Cart */}
         <Link href="/" className="relative md:flex items-center gap-2">
