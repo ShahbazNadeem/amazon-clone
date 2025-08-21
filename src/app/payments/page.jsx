@@ -52,7 +52,9 @@ const WiseSignup = () => {
                 <Link href='/wisesignup' className="bg-green-950 text-[#a1df6b] px-4 py-1 rounded-full">
                   Register
                 </Link>
-                <WiseSideBar/>
+                <div className="block xl:hidden">
+                  <WiseSideBar/>
+                </div>
               </div>
             </div>
           </nav>
