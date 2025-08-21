@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import WiseSideBar from '../_components/layout/WiseSideBar'
 
 const WiseSignup = () => {
   return (
@@ -7,17 +8,22 @@ const WiseSignup = () => {
       <section>
         <div className='container'>
           <nav className="px-8 py-6">
-            <div className="container mx-auto flex justify-between items-center">
+            <div className="mx-auto flex justify-between items-center">
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-2">
                   <img
                     src="/images/wise/wiseLogo.png"
                     alt="Wise Logo"
-                    className="w-20 h-auto"
+                    className="w-20 h-auto hidden xl:block"
+                  />
+                  <img
+                    src="/images/wise/wiseminilogo.png"
+                    alt="Wise Logo"
+                    className="w-10 h-auto block xl:hidden"
                   />
                 </div>
 
-                <div className="flex items-center gap-4 text-md text-green-950 font-semibold">
+                <div className="hidden xl:flex items-center gap-4 text-md text-green-950 font-semibold ">
                   <button className="px-4 py-1 rounded-full bg-[#84c55d] border-[1px] border-gray-400">Personal</button>
                   <a href="#" className="hover:bg-[#16330014] px-4 py-1 rounded-full">Business</a>
                   <a href="#" className="hover:bg-[#16330014] px-4 py-1 rounded-full">Platform</a>
@@ -26,14 +32,14 @@ const WiseSignup = () => {
 
               {/* Right Side */}
               <div className="flex items-center gap-4 text-md font-semibold text-green-950">
-                <div className="relative group">
+                <div className="relative group hidden xl:block">
                   <button className="">Features ▾</button>
                   {/* Dropdown */}
                 </div>
-                <a href="#" className="hover:bg-[#16330014] px-4 py-1 rounded-full">Pricing</a>
-                <a href="#" className="hover:bg-[#16330014] px-4 py-1 rounded-full">Help</a>
+                <a href="#" className="hover:bg-[#16330014] px-4 py-1 rounded-full hidden xl:block">Pricing</a>
+                <a href="#" className="hover:bg-[#16330014] px-4 py-1 rounded-full hidden xl:block">Help</a>
 
-                <div className="flex items-center gap-1">
+                <div className="hidden xl:flex items-center gap-1">
                   <img
                     src="/images/wise/usFlag.svg"
                     alt="US Flag"
@@ -42,10 +48,11 @@ const WiseSignup = () => {
                   <span>EN</span>
                 </div>
 
-                <Link href="/wiselogin" className="hover:bg-[#16330014] px-4 py-1 rounded-full">Log in</Link>
+                <Link href="/wiselogin" className="hover:bg-[#16330014] px-4 py-1 rounded-full hidden xl:block">Log in</Link>
                 <Link href='/wisesignup' className="bg-green-950 text-[#a1df6b] px-4 py-1 rounded-full">
                   Register
                 </Link>
+                <WiseSideBar/>
               </div>
             </div>
           </nav>
