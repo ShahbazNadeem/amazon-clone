@@ -3,12 +3,13 @@ import { FaSearch, FaFlagUsa, FaInfoCircle, FaArrowRight } from "react-icons/fa"
 import { IoLocationOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowForward } from "react-icons/io";
-import { FaRegUser } from "react-icons/fa6";
+import { FaRegUser, FaHeadset, FaSlideshare } from "react-icons/fa6";
 import { CiGlobe } from "react-icons/ci";
 import { BiCartAdd } from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
 import { Bs1Circle, Bs1CircleFill, Bs2Circle, Bs2CircleFill, Bs3Circle, Bs3CircleFill } from "react-icons/bs";
-import { LuUserRoundPlus, LuPackagePlus } from "react-icons/lu";
+import { LuUserRoundPlus, LuPackagePlus, LuArrowLeftRight } from "react-icons/lu";
+
 import { ImPriceTags } from "react-icons/im";
 
 export const swipperImages = [
@@ -46,6 +47,9 @@ export const Icons = {
   pakage: LuPackagePlus,
   infoCircle: FaInfoCircle,
   fullRightArrow: FaArrowRight,
+  doubleArrow: LuArrowLeftRight,
+  headset: FaHeadset,
+  share: FaSlideshare,
 
 }
 

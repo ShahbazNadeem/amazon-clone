@@ -83,14 +83,14 @@ const WiseSignup = () => {
                     onClick={() => setIsOpen(true)}
                     className="rounded-full border-3 sm:border-4 md:border-6 border-white cursor-pointer w-[40px] sm:w-[60px] md:w-[80px]"
                   >
-                    <img src={`/images/wise/${code}.svg`} alt={code} className='w-full h-auto'/>
+                    <img src={`/images/wise/${code}.svg`} alt={code} className='w-full h-auto' />
                   </figure>
 
                   {index === 0 && (
-                    <span className="hidden rounded-full bg-[#E2F6D5] md:flex justify-end items-center w-[120px] px-2">
+                    <span className="hidden rounded-full bg-[#E2F6D5] md:flex justify-end items-center w-[140px] px-2">
                       <span className="bg-green-950 p-5 rounded-full">
                         <Icons.fullRightArrow
-                          size={20}
+                          size={28}
                           className="text-[#A3E46B]"
                         />
                       </span>
@@ -165,7 +165,51 @@ const WiseSignup = () => {
         </div>
       </section>
 
-      <section></section>
+      <section className='bg-white pt-10 md:pt-20'>
+        <div className="container">
+          <div className="flex flex-col sm:flex-row gap-5 justify-between mx-5 md:mx-0">
+            <span className="flex flex-col gap-2 basis-[33%] items-start ">
+              <span className='p-3 md:p-5 rounded-full bg-gray-200'><Icons.headset size={25} /></span>
+              <span className='font-semibold text-[18px] md:text-[20px]'>Instant, secure transfer</span>
+              <span className='sm:max-w-[180px] md:max-w-[360px] text-gray-600 font-semibold text-[14px] md:text-[16px]'>Design to deliver. 64% of transfer arrive in under 20 seconds, and 95% in a day.</span>
+            </span>
+            <span className="flex flex-col gap-2 basis-[33%] items-start ">
+              <span className='p-3 md:p-5 rounded-full bg-gray-200'><Icons.doubleArrow size={25} /></span>
+              <span className='font-semibold text-[18px] md:text-[20px]'>An exchange rate that won’t change</span>
+              <span className='sm:max-w-[180px] md:max-w-[360px] text-gray-600 font-semibold text-[14px] md:text-[16px]'>Lock in exactly what your recipient will get for up to 24 hours. If the rate drops, you won’t lose out.</span>
+            </span>
+            <span className="flex flex-col gap-2 basis-[33%] items-start ">
+              <span className='p-3 md:p-5 rounded-full bg-gray-200'><Icons.share size={25} /></span>
+              <span className='font-semibold text-[18px] md:text-[20px]'>Instant, secure transfer</span>
+              <span className='sm:max-w-[180px] md:max-w-[360px] text-gray-600 font-semibold text-[14px] md:text-[16px]'>Get help from our experts by phone, email or chat any time.</span>
+            </span>
+
+          </div>
+          <div className="mx-5 md:mx-0 py-10 md:py-20">
+            <video src="/videos/wise/Wise.webm"
+              type="video/mp4"
+              width="100%"
+              autoPlay
+              loop
+              muted
+              className="rounded-lg shadow-lg" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className='flex flex-col gap-3 md:gap-5 items-center mx-5  md:mx-0'>
+            <h2 className='font-bold uppercase '>100% transparent pricing</h2>
+            <span className='text-gray-700 text-[16px] md:text-[20px] max-w-[500px] font-semibold text-center'>Banks and other providers inflate the mid-market exchange rate to hide fees and make you pay more. Not Wise. You’ll always get our stand-out rate, like the one on Google.</span>
+            <span>
+              <button className='bg-[#A3E46B] w-full rounded-full py-3.5 px-5 transition-all duration-300 ease-in-out hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed relative cursor-pointer font-semibold'>
+                Send money now
+              </button>
+            </span>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

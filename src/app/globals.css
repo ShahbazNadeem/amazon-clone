@@ -38,9 +38,9 @@ body {
 }
 
 
-h2 {
+/* h2 {
   font-size: 20px;
-}
+} */
 
 h3 {
   font-size: 14px;
@@ -60,4 +60,57 @@ p {
 
 .btn1:hover {
   background-color: #FBBF24;
+}
+
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 64px;
+    word-spacing: -5px;
+    letter-spacing: -3px;
+  }
+
+}
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 102px;
+    line-height: 98px;
+  }
+  h2 {
+    font-size: 60px;
+    word-spacing: -5px;
+    letter-spacing: -3px;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    line-height: 65px;
+    font-size: 65px;
+  }
+
+  h2 {
+    font-size: 40px;
+    word-spacing: -5px;
+    letter-spacing: -3px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  h1 {
+    line-height: 65px;
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 30px;
+    word-spacing: -2px;
+    letter-spacing: -1px;
+  }
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 26px;
+  }
 }
