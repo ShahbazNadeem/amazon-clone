@@ -3,7 +3,7 @@ import React from 'react'
 const FourBox = ({ data, title }) => {
     return (
         <div className="bg-white p-4 lg:p-2 shadow-sm basis-[100%] sm:basis-[47%] md:basis-[32%] lg:basis-[24%]">
-            <h2 className="text-lg font-semibold mb-4">{title}</h2>
+            <span className="text-lg font-semibold mb-4">{title}</span>
             <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
                 {data.map((item, index) => (
                     <div key={index} className="w-[46%]">

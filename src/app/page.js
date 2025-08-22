@@ -30,7 +30,7 @@ export default function Home() {
       <section>
         <div className="container">
           <div className="bg-white md:mx-3 mt-5 p-5">
-            <h2 className="text-lg font-semibold mb-4">Best Sellers in Home & Kitchen</h2>
+            <span className="text-lg font-semibold mb-4">Best Sellers in Home & Kitchen</span>
             <SwipperBox data={swipperBoxImages1} id='first' />
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Home() {
       <section>
         <div className="container">
           <div className="bg-white md:mx-3 mt-5 p-5">
-            <h2 className="text-lg font-semibold mb-4">Best Sellers in Clothing, Shoes & Jewelry</h2>
+            <span className="text-lg font-semibold mb-4">Best Sellers in Clothing, Shoes & Jewelry</span>
             <SwipperBox data={swipperBoxImages1} id='second' />
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
       <section>
         <div>
           <div className="bg-white mt-5 p-5">
-            <h2 className="text-lg font-semibold mb-4">Customers who viewed items in your browsing history also viewed</h2>
+            <span className="text-lg font-semibold mb-4">Customers who viewed items in your browsing history also viewed</span>
             <SwipperBox data={history} id='third' />
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function Home() {
 
       <section className="py-5">
         <div className="flex flex-col gap-0.5 items-center">
-          <h2 className="text-lg font-semibold">See personalized recommendations</h2>
+          <span className="text-lg font-semibold">See personalized recommendations</span>
           <span><button className="btn1">Sign in</button></span>
           <span>New customer? <Link href="/" className="text-blue-600 underline">Start here</Link></span>
         </div>
