@@ -3,10 +3,37 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import WiseSideBar from '../_components/layout/WiseSideBar'
 import { Icons } from '../data/Imports'
+import Image from 'next/image'
+import CurrencySelect from '../_components/CurrencySelect'
 
 const WiseSignup = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const flags = ["gb", "us", "in", "ca", "es", "mx", "th"];
+  const providers = [
+    {
+      name: "Wise",
+      logo: "/images/wise/wiseminilogo.png",
+      bg: "bg-[#9FE870]", // special background
+      values: ["850.42 EUR", "0.855103", "0 USD ?", "5.48 USD", "5.48 USD"],
+    },
+    {
+      name: "Bank of America",
+      logo: "/images/wise/bank-of-america-mark.svg",
+      values: ["850.42 EUR", "0.855103", "0 USD ?", "5.48 USD", "5.48 USD"],
+    },
+    {
+      name: "Wells Fargo",
+      logo: "/images/wise/wells-fargo-mark.svg",
+      values: ["850.42 EUR", "0.855103", "0 USD ?", "5.48 USD", "5.48 USD"],
+    },
+    {
+      name: "Chase US",
+      logo: "/images/wise/chase-mark.svg",
+      values: ["850.42 EUR", "0.855103", "0 USD ?", "5.48 USD", "5.48 USD"],
+    },
+  ];
+
 
   return (
     <div className='min-h-screen'>
@@ -197,19 +224,74 @@ const WiseSignup = () => {
         </div>
       </section>
 
-      <section>
+      <section className='hidden xl:block'>
         <div className="container">
-          <div className='flex flex-col gap-3 md:gap-5 items-center mx-5  md:mx-0'>
+          <div className='flex flex-col gap-3 md:gap-5 items-center mx-5 md:mx-0 py-10'>
             <h2 className='font-bold uppercase '>100% transparent pricing</h2>
-            <span className='text-gray-700 text-[16px] md:text-[20px] max-w-[500px] font-semibold text-center'>Banks and other providers inflate the mid-market exchange rate to hide fees and make you pay more. Not Wise. You’ll always get our stand-out rate, like the one on Google.</span>
+            <span className='text-gray-700 text-[16px] md:text-[20px] max-w-[550px] font-semibold text-center'>Banks and other providers inflate the mid-market exchange rate to hide fees and make you pay more. Not Wise. You’ll always get our stand-out rate, like the one on Google.</span>
             <span>
               <button className='bg-[#A3E46B] w-full rounded-full py-3.5 px-5 transition-all duration-300 ease-in-out hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed relative cursor-pointer font-semibold'>
                 Send money now
               </button>
             </span>
+            <div className="w-[1200px] rounded-4xl p-8 bg-white shadow-md flex flex-col gap-10">
+              <div className="flex gap-8">
+                <span className='basis-[33%] flex flex-col'>
+                  <span className='font-semibold'>Amount</span>
+                  <input type="number" placeholder='0' className="border-2 border-gray-500 rounded-md py-2 px-3 transition-all duration-300 ease-in-out hover:border-gray-950" />
+                </span>
+                <span className='basis-[33%]'>
+                  <span className='font-semibold'>From</span>
+                  <CurrencySelect />
+                </span>
+                <span className='basis-[33%]'>
+                  <span className='font-semibold'>To</span>
+                  <CurrencySelect />
+                </span>
+              </div>
+
+              <div className="flex gap-2">
+                <div className="basis-[20%] flex items-end p-3">
+                  <span className="flex flex-col gap-5">
+                    <span>Recipient gets (Total after fees)</span>
+                    <span>Exchange rate (1 USD - EUR)</span>
+                    <span>Exchange rate markup</span>
+                    <span>Transfer fee</span>
+                    <span>Total transfer cost</span>
+                  </span>
+                </div>
+
+                {providers.map(({ name, logo, values, bg }, idx) => (
+                  <div
+                    key={idx}
+                    className={`basis-[19%] text-center flex flex-col gap-4 p-3 rounded-2xl ${bg || ""
+                      }`}
+                  >
+                    <span className="flex flex-col items-center gap-2 border-b border-gray-400 py-2">
+                      <figure className="w-[50px]">
+                        <img src={logo} alt={name} className="w-full h-auto" />
+                      </figure>
+                      <span>{name}</span>
+                    </span>
+
+                    <span className="flex flex-col gap-6">
+                      {values.map((val, i) => (
+                        <span key={i}>{val}</span>
+                      ))}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="border-t border-gray-400 text-center pt-4 underline text-green-950 text-[14px] font-semibold">Show more providers</div>
+            </div>
+
+            <span className='text-[14px] font-semibold text-gray-600'>This applies when you pay in via ACH payments. <span className='underline text-green-950 '>How do we collect this data</span></span>
           </div>
         </div>
       </section>
+
+      <section></section>
     </div>
   )
 }
