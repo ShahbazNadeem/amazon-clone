@@ -33,6 +33,32 @@ const WiseSignup = () => {
       values: ["850.42 EUR", "0.855103", "0 USD ?", "5.48 USD", "5.48 USD"],
     },
   ];
+  const getWise = [
+    {
+      name: "Recieve money fast",
+      pic: "/images/wise/bankDetails.svg",
+      detail: 'Get paid easily in other countries with global account details',
+      detail2: '23 curriences',
+      button: 'Explore getting paid',
+      link: ''
+    },
+    {
+      name: "Save on spending abroad",
+      pic: "/images/wise/personal_green_wise_.webp",
+      detail: 'Pay and withdraw cash worldwide with out any foreign transation fees.',
+      detail2: '215 contries',
+      button: 'Learn about Wise cards',
+      link: ''
+    },
+    {
+      name: "Recieve interest*",
+      pic: "/images/wise/Screenshot_3.png",
+      detail: 'Opt in and get passthrough FDIC insurance up to  $250,000 through Program Bank.',
+      detail2: 'USD, GBP and EUR',
+      button: 'See our interest features',
+      link: ''
+    },
+  ]
 
 
   return (
@@ -226,7 +252,7 @@ const WiseSignup = () => {
 
       <section className='hidden xl:block'>
         <div className="container">
-          <div className='flex flex-col gap-3 md:gap-5 items-center mx-5 md:mx-0 py-10'>
+          <div className='flex flex-col gap-5 items-center mx-5 md:mx-0 py-10'>
             <h2 className='font-bold uppercase '>100% transparent pricing</h2>
             <span className='text-gray-700 text-[16px] md:text-[20px] max-w-[550px] font-semibold text-center'>Banks and other providers inflate the mid-market exchange rate to hide fees and make you pay more. Not Wise. You’ll always get our stand-out rate, like the one on Google.</span>
             <span>
@@ -261,26 +287,29 @@ const WiseSignup = () => {
                   </span>
                 </div>
 
-                {providers.map(({ name, logo, values, bg }, idx) => (
-                  <div
-                    key={idx}
-                    className={`basis-[19%] text-center flex flex-col gap-4 p-3 rounded-2xl ${bg || ""
-                      }`}
-                  >
-                    <span className="flex flex-col items-center gap-2 border-b border-gray-400 py-2">
-                      <figure className="w-[50px]">
-                        <img src={logo} alt={name} className="w-full h-auto" />
-                      </figure>
-                      <span>{name}</span>
-                    </span>
+                {providers?.map(({ name, logo, values, bg }, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      className={`basis-[19%] text-center flex flex-col gap-4 p-3 rounded-2xl ${bg || ""
+                        }`}
+                    >
+                      <span className="flex flex-col items-center gap-2 border-b border-gray-400 py-2">
+                        <figure className="w-[50px]">
+                          <img src={logo} alt={name} className="w-full h-auto" />
+                        </figure>
+                        <span>{name}</span>
+                      </span>
 
-                    <span className="flex flex-col gap-6">
-                      {values.map((val, i) => (
-                        <span key={i}>{val}</span>
-                      ))}
-                    </span>
-                  </div>
-                ))}
+                      <span className="flex flex-col gap-6">
+                        {values.map((val, i) => (
+                          <span key={i}>{val}</span>
+                        ))}
+                      </span>
+                    </div>
+                  )
+                }
+                )}
               </div>
 
               <div className="border-t border-gray-400 text-center pt-4 underline text-green-950 text-[14px] font-semibold">Show more providers</div>
@@ -291,7 +320,77 @@ const WiseSignup = () => {
         </div>
       </section>
 
-      <section></section>
+      <section className='bg-white min-h-screen xl:pt-10'>
+        <div className="container">
+          <div className="flex flex-col gap-5 items-center mx-5 md:mx-0">
+            <h2 className='font-bold uppercase max-w-[250] sm:max-w-[380px] md:max-w-[550px] xl:max-w-[600px] text-center'>Make your money do more</h2>
+            <span className='text-gray-700 text-[16px] md:text-[20px] font-semibold'>Spend, receive and manage money internationally, as easily as you do at home.</span>
+            <span>
+              <button className='bg-[#A3E46B] w-full rounded-full py-3.5 px-5 transition-all duration-300 ease-in-out hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed relative cursor-pointer font-semibold'>
+                Get Wise
+              </button>
+            </span>
+
+            <div className="flex flex-col md:flex-row justify-center flex-wrap gap-5">
+              {getWise?.map(({ name, pic, detail, detail2, button, link }, idx) => {
+                return (
+                  <div className="basis-[100%] md:basis-[48%] xl:basis-[28%] p-5 flex flex-col justify-between items-center gap-10 bg-[#EDEFEB] rounded-2xl">
+                    <figure className='w-[200px]'><img src={pic} alt="pic" className='w-full h-auto' /></figure>
+
+                    <div className="flex flex-col gap-5 items-center text-center">
+                      <span>{name}</span>
+                      <span>{detail}</span>
+                      <span className='font-semibold text-green-950 flex items-center gap-3'>
+                        <Icons.check />
+                        {detail2}
+                      </span>
+                    </div>
+
+                    <span>
+                      <button className='border-[1px] border-green-950 hover:border-[#A3E46B] hover:bg-[#A3E46B] transition-all duration-300 ease-in-out font-semibold text-green-950 rounded-full p-3'>{button}</button>
+                    </span>
+
+                  </div>
+                )
+              }
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='bg-white'>
+        <div className="container">
+          <div className="">
+            <div className="flex">
+              <div className="basis-[50%]">
+                <figure><img src="/images/wise/securityImage.jpg" alt="securityImage" /></figure>
+              </div>
+              <div className="basis-[50%]">
+                <span>
+                  <h2 className='font-bold uppercase'>Safe at every step</h2>
+                  <span className='text-gray-700 text-[16px] md:text-[20px] max-w-[550px] font-semibold'>14.8 customers, businesses and banks use Wise every day. They move $10 billion every month. Here’s how we keep each dollar safe.
+                  </span>
+                </span>
+
+                <span>
+                  <span>
+                    <span>icon</span>
+                    <span>
+                      Federally regulated
+                    Regulated nationwide, with 65 licenses worldwide to keep your money moving.
+                    </span>
+                  </span>
+                </span>
+
+                <span>
+                  <button>See our security</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
