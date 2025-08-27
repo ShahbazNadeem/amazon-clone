@@ -1,5 +1,5 @@
 import { FiShoppingCart, FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FaSearch, FaFlagUsa, FaInfoCircle, FaArrowRight, FaCheckCircle, FaUniversity, FaMobileAlt   } from "react-icons/fa";
+import { FaSearch, FaFlagUsa, FaInfoCircle, FaArrowRight, FaCheckCircle, FaUniversity, FaMobileAlt, FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowForward } from "react-icons/io";
@@ -54,6 +54,10 @@ export const Icons = {
   universal: FaUniversity,
   shield: MdOutlineShield,
   mobile: FaMobileAlt,
+  facebook:FaFacebook,
+  twitter:FaTwitter,
+  instagram:FaInstagram,
+  youtube:FaYoutube,
 }
 
 export const swipperBoxImages1 = [
