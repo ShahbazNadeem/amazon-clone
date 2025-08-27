@@ -64,6 +64,13 @@ p {
   background-color: #FBBF24;
 }
 
+.btn-wise {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background-color: #A3E46B;
+
+}
+
 /* @media (min-width: 1400px) {
   h2 {
     font-size: 64px;

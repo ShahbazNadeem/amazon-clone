@@ -59,6 +59,23 @@ const WiseSignup = () => {
       link: ''
     },
   ]
+  const features = [
+    {
+      icon: <Icons.universal size={20} />,
+      title: "Federally regulated",
+      desc: "Regulated nationwide, with 65 licenses worldwide to keep your money moving.",
+    },
+    {
+      icon: <Icons.shield size={20} />,
+      title: "Safeguarded funds",
+      desc: "Your money is protected in a safeguarded, separate account.",
+    },
+    {
+      icon: <Icons.mobile size={20} />,
+      title: "Specialized anti-fraud tech",
+      desc: "Over 1,000 experts and our smart systems run 7 million checks every day to spot and stop fraud.",
+    },
+  ];
 
 
   return (
@@ -256,7 +273,7 @@ const WiseSignup = () => {
             <h2 className='font-bold uppercase '>100% transparent pricing</h2>
             <span className='text-gray-700 text-[16px] md:text-[20px] max-w-[550px] font-semibold text-center'>Banks and other providers inflate the mid-market exchange rate to hide fees and make you pay more. Not Wise. You’ll always get our stand-out rate, like the one on Google.</span>
             <span>
-              <button className='bg-[#A3E46B] w-full rounded-full py-3.5 px-5 transition-all duration-300 ease-in-out hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed relative cursor-pointer font-semibold'>
+              <button className='btn-wise font-semibold'>
                 Send money now
               </button>
             </span>
@@ -326,7 +343,7 @@ const WiseSignup = () => {
             <h2 className='font-bold uppercase max-w-[250] sm:max-w-[380px] md:max-w-[550px] xl:max-w-[600px] text-center'>Make your money do more</h2>
             <span className='text-gray-700 text-[16px] md:text-[20px] font-semibold'>Spend, receive and manage money internationally, as easily as you do at home.</span>
             <span>
-              <button className='bg-[#A3E46B] w-full rounded-full py-3.5 px-5 transition-all duration-300 ease-in-out hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed relative cursor-pointer font-semibold'>
+              <button className='btn-wise font-semibold'>
                 Get Wise
               </button>
             </span>
@@ -359,34 +376,41 @@ const WiseSignup = () => {
         </div>
       </section>
 
-      <section className='bg-white'>
+      <section className='bg-white pt-10 px-5 md:px-0'>
         <div className="container">
-          <div className="">
-            <div className="flex">
-              <div className="basis-[50%]">
-                <figure><img src="/images/wise/securityImage.jpg" alt="securityImage" /></figure>
-              </div>
-              <div className="basis-[50%]">
-                <span>
-                  <h2 className='font-bold uppercase'>Safe at every step</h2>
-                  <span className='text-gray-700 text-[16px] md:text-[20px] max-w-[550px] font-semibold'>14.8 customers, businesses and banks use Wise every day. They move $10 billion every month. Here’s how we keep each dollar safe.
-                  </span>
+          <div className="flex md:flex-row flex-col gap-10">
+            <div className="basis-[100%] md:basis-[50%]">
+              <figure classNAme='w-[100px] md:w-[200px]'><img src="/images/wise/securityImage.jpg" alt="securityImage" className='w-fit h-auto' /></figure>
+            </div>
+            <div className="basis-[100%] md:basis-[50%] flex flex-col justify-between py-10 gap-5">
+              <span className='flex flex-col gap-5'>
+                <h2 className='font-bold uppercase'>Safe at every step</h2>
+                <span className='text-gray-600 text-[16px] md:text-[20px] max-w-[550px] font-semibold'>14.8 customers, businesses and banks use Wise every day. They move $10 billion every month. Here’s how we keep each dollar safe.
                 </span>
+              </span>
 
-                <span>
-                  <span>
-                    <span>icon</span>
-                    <span>
-                      Federally regulated
-                    Regulated nationwide, with 65 licenses worldwide to keep your money moving.
+              <div>
+                {features.map(({ icon, title, desc }, idx) => (
+                  <span
+                    key={idx}
+                    className="flex gap-5 p-4 border-t border-gray-300 max-w-[600px]"
+                  >
+                    <span className="p-3 border border-gray-300 rounded-full h-fit">
+                      {icon}
+                    </span>
+                    <span className="flex flex-col gap-1 font-semibold">
+                      <span className="text-[16px] md:text-[20px]">{title}</span>
+                      <span className="text-gray-600 text-[14px] md:text-[18px]">
+                        {desc}
+                      </span>
                     </span>
                   </span>
-                </span>
-
-                <span>
-                  <button>See our security</button>
-                </span>
+                ))}
               </div>
+
+              <span>
+                <button className='btn-wise font-semibold'>See our security</button>
+              </span>
             </div>
           </div>
         </div>

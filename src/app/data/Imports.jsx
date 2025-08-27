@@ -1,5 +1,5 @@
 import { FiShoppingCart, FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FaSearch, FaFlagUsa, FaInfoCircle, FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import { FaSearch, FaFlagUsa, FaInfoCircle, FaArrowRight, FaCheckCircle, FaUniversity, FaMobileAlt   } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowForward } from "react-icons/io";
@@ -10,6 +10,7 @@ import { RxCross2 } from "react-icons/rx";
 import { Bs1Circle, Bs1CircleFill, Bs2Circle, Bs2CircleFill, Bs3Circle, Bs3CircleFill } from "react-icons/bs";
 import { LuUserRoundPlus, LuPackagePlus, LuArrowLeftRight } from "react-icons/lu";
 import { ImPriceTags } from "react-icons/im";
+import { MdOutlineShield } from "react-icons/md";
 
 export const swipperImages = [
   { id: 1, src: '/images/swipperImages/img1.jpg' },
@@ -50,6 +51,9 @@ export const Icons = {
   headset: FaHeadset,
   share: FaSlideshare,
   check: FaCheckCircle,
+  universal: FaUniversity,
+  shield: MdOutlineShield,
+  mobile: FaMobileAlt,
 }
 
 export const swipperBoxImages1 = [
